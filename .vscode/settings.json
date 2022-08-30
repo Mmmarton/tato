@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "websocket_server.h": "c"
+    "websocket_server.h": "c",
+    "param.h": "c"
   }
 }
