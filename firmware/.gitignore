@@ -1,0 +1,16 @@
+*.a
+*.elf
+*.hex
+*.o
+*.eep
+*.lss
+*.map
+*.sym
+*.bin
+*.exe
+obj/
+build/
+docs/
+docs/search/
+.vscode/
+.esp32/

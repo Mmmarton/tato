@@ -1,0 +1,19 @@
+@import './spectre/spectre.scss';
+@import './spectre/spectre-exp.scss';
+@import './spectre/spectre-icons.scss';
+
+@import './lineicons.scss';
+
+.form-input-hint {
+  min-height: 1.1rem;
+  margin: 0;
+}
+
+.modal-body-footer {
+  background: $bg-color-light;
+  position: sticky;
+  transform: translateY(16px);
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
