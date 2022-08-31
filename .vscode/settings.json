@@ -20,6 +20,11 @@
     "esp_eth.h": "c",
     "esp_netif.h": "c",
     "nvs_flash.h": "c",
-    "esp_event.h": "c"
+    "esp_event.h": "c",
+    "*.ipp": "c",
+    "limits.h": "c",
+    "condition_variable": "c",
+    "ctime": "c",
+    "mutex": "c"
   }
 }
