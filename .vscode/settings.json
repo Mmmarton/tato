@@ -3,6 +3,23 @@
     "websocket_server.h": "c",
     "param.h": "c",
     "esp_log.h": "c",
-    "utils.h": "c"
+    "utils.h": "c",
+    "array": "c",
+    "chrono": "c",
+    "compare": "c",
+    "functional": "c",
+    "ratio": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "utility": "c",
+    "variant": "c",
+    "esp_http_server.h": "c",
+    "protocol_examples_common.h": "c",
+    "esp_wifi.h": "c",
+    "esp_system.h": "c",
+    "esp_eth.h": "c",
+    "esp_netif.h": "c",
+    "nvs_flash.h": "c",
+    "esp_event.h": "c"
   }
 }
