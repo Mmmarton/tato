@@ -1,4 +1,4 @@
-menu "Example Connection Configuration"
+menu "Tato Connection Configuration"
 
     config EXAMPLE_GPIO_RANGE_MIN
         int

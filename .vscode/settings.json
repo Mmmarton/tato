@@ -1,6 +1,8 @@
 {
   "files.associations": {
     "websocket_server.h": "c",
-    "param.h": "c"
+    "param.h": "c",
+    "esp_log.h": "c",
+    "utils.h": "c"
   }
 }
