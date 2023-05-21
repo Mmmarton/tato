@@ -1,0 +1,15 @@
+.login-page-container {
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-card {
+    padding: 24px;
+    width: 30vw;
+
+    .btn-login {
+      margin-top: 1rem;
+    }
+  }
+}

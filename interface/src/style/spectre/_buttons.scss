@@ -33,6 +33,7 @@
     border-color: darken($primary-color-dark, 5%);
     color: $dark-color;
     text-decoration: none;
+    transform: translateY(2px) scaleX(0.99);
     &.loading {
       &::after {
         border-bottom-color: $light-color;

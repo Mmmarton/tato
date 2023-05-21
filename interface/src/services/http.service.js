@@ -1,4 +1,4 @@
-import { getToken } from './auth.service';
+import AuthService from './auth.service';
 
 const HTTPService = {
   put: async (url, data) => {
@@ -6,7 +6,7 @@ const HTTPService = {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        Authorization: getToken(),
+        Authorization: AuthService.getToken(),
       },
       body: JSON.stringify(data),
     })
@@ -21,7 +21,7 @@ const HTTPService = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        Authorization: getToken(),
+        Authorization: AuthService.getToken(),
       },
       body: JSON.stringify(data),
     })
@@ -36,7 +36,7 @@ const HTTPService = {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        Authorization: getToken(),
+        Authorization: AuthService.getToken(),
       },
     })
       .then((response) => {
@@ -50,7 +50,7 @@ const HTTPService = {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        Authorization: getToken(),
+        Authorization: AuthService.getToken(),
       },
     })
       .then((response) => {
