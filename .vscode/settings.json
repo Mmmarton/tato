@@ -25,6 +25,7 @@
     "limits.h": "c",
     "condition_variable": "c",
     "ctime": "c",
-    "mutex": "c"
+    "mutex": "c",
+    "semphr.h": "c"
   }
 }
