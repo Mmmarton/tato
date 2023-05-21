@@ -1,6 +1,8 @@
 #include "delay.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
+#include "tcp/tcp.h"
+#include "wifi/wifi.h"
 #include <stdint.h>
 #include <string.h>
 
@@ -19,6 +21,8 @@ void closeValve(void);
 void app_main(void) {
 
     setupValve();
+    WIFI::init("Oppai", "nem68akarok92menni");
+    TCP::init("192.168.1.103", 8082);
 
     while (1) {
         closeValve();

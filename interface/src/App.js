@@ -2,8 +2,8 @@ import "./App.scss";
 
 function App() {
   return (
-    <div class="hero bg-gray">
-      <div class="hero-body">
+    <div className="hero bg-gray">
+      <div className="hero-body">
         <h1>Hero title</h1>
         <p>This is a hero example</p>
       </div>

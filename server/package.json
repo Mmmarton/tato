@@ -1,0 +1,19 @@
+{
+  "name": "tato-server",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "git@github.com:NuttyYokel/tato.git",
+  "author": "Marton Cserei",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --no-stdin src/main.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "rxjs": "^7.8.1",
+    "ws": "^8.13.0"
+  }
+}
