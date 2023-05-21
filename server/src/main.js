@@ -4,13 +4,13 @@ const { startWebSocketService } = require('./services/websocket.service');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const { finalize } = require('rxjs');
-dotenv.config();
 const express = require('express');
-const { logIn } = require('./services/auth.service');
+const { logIn, isLoggedIn } = require('./services/auth.service');
 
 let wsClient;
 let tcpConnection;
 
+dotenv.config();
 startWebServers();
 setupRoutes();
 
@@ -29,6 +29,10 @@ function setupRoutes() {
     const token = logIn(username, password);
 
     resp.json({ token });
+  });
+
+  app.get('/healthcheck', (req, resp) => {
+    resp.json({ isLoggedIn: isLoggedIn(req.header('Authorization')) });
   });
 
   app.listen(process.env.HTTP_PORT, () =>

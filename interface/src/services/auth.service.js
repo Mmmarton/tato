@@ -5,8 +5,8 @@ const AuthService = {
    * Attempts to log in the user
    * @param {string} token
    */
-  logIn: async function logIn(username, password) {
-    const token = await HTTPService.post('http://localhost:8080/login', {
+  logIn: async function (username, password) {
+    const token = await HTTPService.post('login', {
       username,
       password,
     });
@@ -21,7 +21,7 @@ const AuthService = {
    * Sets the current token.
    * @param {string} token
    */
-  setToken: function setToken(token) {
+  setToken: function (token) {
     localStorage.setItem('token', token);
   },
 
@@ -29,8 +29,22 @@ const AuthService = {
    * Sets the current token.
    * @returns {string}
    */
-  getToken: function getToken() {
+  getToken: function () {
     return localStorage.getItem('token');
+  },
+
+  /**
+   * Does a healthcheck call and returns false if the user is not logged in.
+   * @returns {Promise<boolean>}
+   */
+  healthcheck: async function () {
+    const response = await HTTPService.get('healthcheck');
+    if (!response || !response.isLoggedIn) {
+      if (this.getToken()) {
+        this.setToken('');
+        window.location.replace('/');
+      }
+    }
   },
 };
 
