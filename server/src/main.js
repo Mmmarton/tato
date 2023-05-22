@@ -6,6 +6,8 @@ const cors = require('cors');
 const { finalize } = require('rxjs');
 const express = require('express');
 const { logIn, isLoggedIn } = require('./services/auth.service');
+const { COMMAND_REQUEST_ID, COMMAND_SET_ID } = require('./constants');
+const { ValveService } = require('./services/valve.service');
 
 let wsClient;
 let tcpConnection;
@@ -59,9 +61,15 @@ function startWebServers() {
           })
         )
         .subscribe((message) => {
-          console.log(message);
-          if (wsClient) {
-            wsClient?.write(`beep`);
+          if (!message) {
+            return;
+          }
+          switch (message.charCodeAt(0)) {
+            case COMMAND_REQUEST_ID:
+              const id = ValveService.createValve();
+              connection.write(
+                new Uint8Array([COMMAND_SET_ID, (id >> 8) & 0xff, id & 0xff])
+              );
           }
         });
     }

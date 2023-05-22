@@ -6,7 +6,7 @@
   "author": "Marton Cserei",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --no-stdin src/main.js"
+    "start": "nodemon --ignore ./db/ --no-stdin src/main.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

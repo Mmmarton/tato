@@ -67,12 +67,12 @@ function createSocketSubject(socket) {
       dataArrays.forEach((array) => subject.next(array.join('')));
     })
     .on('end', () => {
-      subject.next([-1]);
+      subject.next(null);
       subject.complete();
     })
     .on('error', (error) => {
       console.error(`TCP error: ${error}`);
-      subject.next([-1]);
+      subject.next(null);
       subject.complete();
     });
   socket.setKeepAlive(true, 1000);

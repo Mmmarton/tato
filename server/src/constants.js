@@ -1,0 +1,4 @@
+const COMMAND_REQUEST_ID = 1;
+const COMMAND_SET_ID = 2;
+
+module.exports = { COMMAND_REQUEST_ID, COMMAND_SET_ID };
